@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Privacy Policy – AppLocker</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #EFF6FF;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #475569;
+      --border: #E2E8F0;
+      --radius: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      word-wrap: break-word;
+    }
+    header {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: #FFFFFF;
+      padding: 36px 20px 32px;
+      text-align: center;
+    }
+    .header-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title .num {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 16px 0 8px;
+    }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      margin: 2px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .highlight {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+      margin: 14px 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+    .perm-table th {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .perm-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .perm-table tr:last-child td {
+      border-bottom: none;
+    }
+    .perm-table tr:nth-child(even) td {
+      background: #F8FAFC;
+    }
+    .perm-name {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .contact-box {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .contact-box a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+    .footer-text {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-top: 28px;
+    }
+    @media (max-width: 480px) {
+      header { padding: 28px 16px 24px; }
+      header h1 { font-size: 21px; }
+      .card { padding: 18px 14px; border-radius: 14px; }
+      .card-title { font-size: 16px; }
+      body { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-icon">🔒</div>
+  <h1>AppLocker – Privacy Policy</h1>
+  <p>Last Updated: September 2026</p>
+</header>
+
+<div class="container">
+
+  <!-- Introduction -->
+  <div class="card">
+    <div class="card-title"><span class="num">01</span> Introduction</div>
+    <p>Welcome to <strong>AppLocker</strong> ("App", "we", "us", "our"). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how our application collects, uses, and safeguards your data.</p>
+    <p>By installing or using AppLocker, you agree to the practices described in this policy.</p>
+    <div class="highlight">
+      <strong>Core Privacy Principle:</strong> AppLocker is engineered to operate on-device. Your lock credentials (PIN, pattern), hidden files in the Vault, and app lists are stored and processed strictly on your device and are never transmitted to our servers.
+    </div>
+  </div>
+
+  <!-- Information We Collect -->
+  <div class="card">
+    <div class="card-title"><span class="num">02</span> Information We Collect &amp; Process</div>
+
+    <h3>2.1 Stored Locally on Device</h3>
+    <ul>
+      <li><strong>Lock Credentials:</strong> Encrypted PIN codes, lock patterns, and recovery security questions.</li>
+      <li><strong>Locked Apps Configuration:</strong> The list of applications you choose to protect with AppLocker.</li>
+      <li><strong>File Vault (Hidden Files):</strong> Photos, videos, audio, and documents you choose to hide within the private vault.</li>
+      <li><strong>Intruder Photos:</strong> Selfies captured when an unauthorized user enters an incorrect PIN or pattern (optional feature, user-enabled only).</li>
+      <li><strong>Preferences:</strong> Themes, wallpaper choices, vibration feedback, and display options.</li>
+    </ul>
+
+    <h3>2.2 On-Device Data Processing</h3>
+    <ul>
+      <li><strong>Usage Statistics (<span class="badge">PACKAGE_USAGE_STATS</span>):</strong> Processed strictly on your device in real-time to detect when a locked app is opened so the lock overlay can appear immediately.</li>
+      <li><strong>Installed Packages (<span class="badge">QUERY_ALL_PACKAGES</span>):</strong> Queried locally to present you with a list of apps available to lock or clean.</li>
+      <li><strong>Junk Cleaning:</strong> Scans device storage for temporary cache, obsolete APKs, empty folders, and large residual files to help free up storage space. All scanning is performed locally on-device.</li>
+    </ul>
+
+    <h3>2.3 Information Collected Automatically via Third-Party SDKs</h3>
+    <ul>
+      <li><strong>Advertising Identifiers (<span class="badge">AD_ID</span>):</strong> Used by our advertising partners to serve relevant contextual and programmatic advertisements.</li>
+      <li><strong>Network &amp; Device Information:</strong> Basic device model, OS version, and network status for remote configuration, performance optimization, and ad delivery.</li>
+      <li><strong>Push Notification Token:</strong> Firebase Cloud Messaging token used exclusively to deliver important security notifications and app updates.</li>
+    </ul>
+  </div>
+
+  <!-- Permissions -->
+  <div class="card">
+    <div class="card-title"><span class="num">03</span> Permissions Explained</div>
+    <p>AppLocker requests only the permissions necessary to provide its security and utility features:</p>
+    
+    <div class="table-container">
+      <table class="perm-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="perm-name">PACKAGE_USAGE_STATS</td>
+            <td>Detect when a locked app is launched to display the lock screen overlay in real-time.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">QUERY_ALL_PACKAGES</td>
+            <td>Display your installed apps so you can choose which ones to lock or manage.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">SYSTEM_ALERT_WINDOW</td>
+            <td>Display the secure lock screen overlay on top of locked applications.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">Accessibility Service</td>
+            <td>Detect foreground app transitions reliably across various Android versions and custom OEM ROMs.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">CAMERA</td>
+            <td>Capture photos of intruders who fail unlock attempts (optional, enabled by user).</td>
+          </tr>
+          <tr>
+            <td class="perm-name">MANAGE_EXTERNAL_STORAGE / STORAGE</td>
+            <td>Enable the File Vault (hiding and restoring photos, videos, files) and Junk Cleaner (scanning cache and obsolete files).</td>
+          </tr>
+          <tr>
+            <td class="perm-name">USE_BIOMETRIC / USE_FINGERPRINT</td>
+            <td>Allow fast and secure unlocking using your device's fingerprint or biometric sensor.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">POST_NOTIFICATIONS</td>
+            <td>Display the required foreground service notification to ensure continuous app locking protection.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">FOREGROUND_SERVICE</td>
+            <td>Keep the locking engine actively protecting your apps in the background.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">RECEIVE_BOOT_COMPLETED</td>
+            <td>Automatically restart protection when your device is rebooted.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td>
+            <td>Prevent the Android OS from terminating background security services.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">INTERNET / ACCESS_NETWORK_STATE</td>
+            <td>Fetch remote configuration, app updates, and display advertisements.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">AD_ID</td>
+            <td>Required for advertising partners to serve and measure advertisements.</td>
+          </tr>
+          <tr>
+            <td class="perm-name">VIBRATE</td>
+            <td>Provide haptic feedback during password and pattern entry.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Advertising -->
+  <div class="card">
+    <div class="card-title"><span class="num">04</span> Advertising &amp; Third Parties</div>
+    <p>AppLocker is free to use and supported by advertisements. We partner with reputable advertising networks:</p>
+    <ul>
+      <li><strong>Google AdMob</strong> – <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><strong>Adivery</strong> – <a href="https://adivery.com/privacy" target="_blank" rel="noopener">Adivery Privacy Policy</a></li>
+      <li><strong>Tapsell</strong> – <a href="https://tapsell.ir/privacy" target="_blank" rel="noopener">Tapsell Privacy Policy</a></li>
+    </ul>
+    <p>These advertising partners may use device identifiers (Google Advertising ID) and network telemetry to deliver and measure advertisements. You can reset or opt out of personalized ads at any time via your device settings (<strong>Settings → Google → Ads</strong>).</p>
+  </div>
+
+  <!-- Data Security -->
+  <div class="card">
+    <div class="card-title"><span class="num">05</span> Data Security &amp; Retention</div>
+    <p>We implement robust security measures to protect your information:</p>
+    <ul>
+      <li>All sensitive credentials (passwords, PINs, patterns) are securely hashed and stored in encrypted local app storage.</li>
+      <li>Vault files are stored in dedicated private folders on your device and are never uploaded to any remote server.</li>
+      <li>Network communications (e.g., remote configuration) use secure HTTPS encryption.</li>
+      <li>Uninstalling the application or clearing app data completely removes all locally stored credentials and settings.</li>
+    </ul>
+  </div>
+
+  <!-- Children's Privacy -->
+  <div class="card">
+    <div class="card-title"><span class="num">06</span> Children's Privacy</div>
+    <p>AppLocker is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+  </div>
+
+  <!-- User Rights -->
+  <div class="card">
+    <div class="card-title"><span class="num">07</span> Your Rights &amp; Choices</div>
+    <p>You have full control over your data and app permissions:</p>
+    <ul>
+      <li>You can revoke optional permissions (Camera, Storage, Accessibility) at any time through your Android system settings.</li>
+      <li>You can clear all stored data, password configurations, and cached files by clearing the app data or uninstalling the app.</li>
+      <li>You can manage or disable personalized advertising in Android Settings.</li>
+    </ul>
+  </div>
+
+  <!-- Changes to Policy -->
+  <div class="card">
+    <div class="card-title"><span class="num">08</span> Changes to This Policy</div>
+    <p>We may update this Privacy Policy periodically to reflect app updates, security enhancements, or legal requirements. We encourage you to review this page periodically.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <div class="card-title"><span class="num">09</span> Contact Us</div>
+    <p>If you have any questions, suggestions, or privacy-related concerns regarding AppLocker, please contact our support team:</p>
+    <div class="contact-box">
+      <p style="font-size:15px; color: var(--text); font-weight: 700; margin-bottom: 6px;">AppLocker Support Team</p>
+      <p>📧 <a href="mailto:support@applocker.app">support@applocker.app</a></p>
+    </div>
+  </div>
+
+  <p class="footer-text">© 2026 AppLocker. All rights reserved.</p>
+
+</div>
+</body>
+</html>
